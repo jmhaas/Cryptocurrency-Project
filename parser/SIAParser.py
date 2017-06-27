@@ -6,7 +6,7 @@ import warnings
 
 warnings.warn('Code is Depreciated', DeprecationWarning)
 
-hdr = {'User-Agent': 'Mac:r/bitcoin-ethereum.sentiment.analysis:v1.0' +
+hdr = {'User-Agent': 'Mac:r/bitcoin.sentiment.analysis:v1.0' +
        '(by /u/jmhaas821'}
 url = 'https://www.reddit.com/r/bitcoin/new/.json'
 req = requests.get(url, headers=hdr)
