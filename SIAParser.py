@@ -2,6 +2,9 @@ import requests
 import json
 import time
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
+import warnings
+
+warnings.warn('Code is Depreciated', DeprecationWarning)
 
 hdr = {'User-Agent': 'Mac:r/bitcoin-ethereum.sentiment.analysis:v1.0' +
        '(by /u/jmhaas821'}
