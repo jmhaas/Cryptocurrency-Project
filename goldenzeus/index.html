@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The Golden Zeus</title>
+		<meta name="description" content="An Automated BitCoin Tracker">
+		<meta name="author" content="The Golden Zeus Team">
+		<!--glyphicons from glyphicons.com -->
+
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100i,400" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+		</script>
+		<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js">
+		</script>
+		<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js">
+		</script>
+		<script>
+  			(function(b,i,t,C,O,I,N) {
+				window.addEventListener('load',function() {
+					if(b.getElementById(C))return;
+					I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+					I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+				},false)
+			})
+		(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+		</script>
+		<script>
+			function on() {
+				document.getElementById("overlay").style.display = "block";
+			}
+			
+			function off() {
+				document.getElementById("overlay").style.display = "none";
+			}
+		</script>
+		<style>
+			h1, h2, h4, p{font-family: 'Roboto', sans-serif; color: #fff575;}
+			i, span{color: #fff575;}
+		</style>
+	
+	</head>
+	<body>
+		<div style="background:transparent !important" class="jumbotron">
+			<h2> Welcome to Golden Zeus </h2>
+			<p> Machine Learned Predictions for Bitcoin</p>
+			<h1>
+				<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>				
+			</h1>
+		</div>
+		<div style="background:transparent !important" class="media">
+			<div class="container">
+				<div class="media-left media-middle">
+<!--
+					<div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD">
+					</div>
+-->
+				</div>
+				<div class="media-body">
+					<h4>Our Mission:</h4>
+					<p style="font-style: italic;">Using Google's TensorFlow machine learning library, we are combining parsed reddit.com/r/bitcoin headlines with bitcoin market history to gauge investor and market attitudes and make educated purchase suggestions.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="overlay" onclick="off()">
+			<div class="btcwdgt-news" bw-cur="usd" bw-entries="10"></div>
+		</div>
+		<div style="text-align: center;" class="container">
+			<div style="padding:100px">
+				<h4>See the Current Market</h4>
+				<a onclick="on()" class="btn btn-primary">
+					<i class="fa fa-line-chart" aria-hidden="true">
+					</i>
+				</a>
+			</div>
+		</div>
+		<div style="text-align: center;" class="container">
+			<a href="http://www.reddit.com/r/bitcoin" class="btn btn-primary">
+				<i class="fa fa-reddit-alien" aria-hidden="true">
+				</i>
+			</a>
+			<a href="http://www.bitcoin.org" class="btn btn-primary">
+				<i class="fa fa-btc" aria-hidden="true">
+				</i>
+			</a>
+		</div>
+	</body>
+</html>
